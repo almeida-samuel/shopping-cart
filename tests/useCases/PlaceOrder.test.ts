@@ -55,7 +55,7 @@ describe("PlaceOrder", () => {
       it("should returns error for a not found item", () => {
         const placeOrder = PlaceOrderFactory.build();
         const user = UserFactory.build();
-        const input = PlaceOrderInputFactory.build({ cpf: user.cpf, items: [{ sku: "0", quantity: 1}] });
+        const input = PlaceOrderInputFactory.build({ cpf: user.cpf, items: [{ sku: "0", quantity: 1 }] });
 
         expect(placeOrder.execute(input)).rejects.toThrow("Item SKU not found");
       });

@@ -17,7 +17,7 @@ describe("Order", () => {
     describe("getTotal", () => {
       it("should match the items sum totals", () => {
         const items = OrderItemFactory.buildList(30);
-        const order = OrderFactory.build({items});
+        const order = OrderFactory.build({ items });
 
         expect(order.getTotal()).toBe(items.reduce((total, item) => total + item.getTotal(), 0));
       });
