@@ -57,7 +57,6 @@ export default class PlaceOrder {
           total: coupon ? order.applyCoupon(coupon) : order.getTotal(),
         }));
       } catch (error) {
-        debugger;
         reject(error);
       }
     });
